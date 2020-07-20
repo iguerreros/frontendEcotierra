@@ -1,0 +1,53 @@
+
+<div class="allcontain">
+	<div class="contact">
+         
+        <div class="row">
+             <div class="col-lg-6">
+                <div class="form"   >
+                    <p>Nombre:</p>
+                    <input type="text" class="field" name="nombre" [(ngModel)]="clientesNuevos.nombre" required> <br/>
+                
+                    <p>Apellido:</p>
+                    <input type="text" class="field" name="apellido" [(ngModel)]="clientesNuevos.apellido" required> <br/>
+                
+                    <p>edad:</p>
+                    <input type="text" class="field" name="edad" [(ngModel)]="clientesNuevos.edad" required> <br/>
+                
+                    <p>fecha Nacimiento:</p>
+                    <input type="text" class="field"   name="fechanacimiento" [(ngModel)]="clientesNuevos.fechanacimiento" required> <br/>
+                
+                    <p class="center-content">
+                        <button class="btn btn-success" type="submit" (click)="registrarCliente()" >Registrar</button>
+                    </p>
+                
+                </div>
+             </div>
+
+             <div class="col-lg-6">
+                <table class="table table-bordered">
+                    <thead>
+                      <tr style="background:  #545050; color: #fff;">
+                        <th scope="col">#</th>
+                        <th scope="col">nombre</th>
+                        <th scope="col">apellido</th>
+                        <th scope="col">edad</th>
+                        <th scope="col">fecha nacimiento</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of listaClientes; index as i">
+                        <th scope="row">{{(i + 1)}}</th>
+                        <td>{{item.nombre}}</td>
+                        <td>{{item.apellido}}</td>
+                        <td>{{item.edad}}</td>
+                        <td>{{item.fechanacimiento}}</td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+             </div>
+        </div>
+
+	</div>
+</div>

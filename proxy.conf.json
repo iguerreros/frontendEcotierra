@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+      "target": "http://ecotierra.com:81",
+      "secure": false,
+      "changeOrigin": true
+    }
+  }
